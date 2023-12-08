@@ -65,7 +65,7 @@ const Sidebar = () => {
                 />
               </div>
               <h1 className="text-2xl font-mono">
-                AI SaaS
+                dron
               </h1>
             </Link>
             <div className="space-y-1">
