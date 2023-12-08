@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import {LayoutDashboard, MessageSquare, ImageIcon, VideoIcon, Music, Code, Settings} from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 
 const Sidebar = () => {
-
+    const pathname = usePathname();
     const routes = [
         {
             label: 'dashboard',
@@ -16,31 +17,31 @@ const Sidebar = () => {
             color: 'text-emerald-500'
         },
         {
-            label: 'conversation',
+            label: 'чат',
             href: '/conversation',
             icon: MessageSquare,
             color: 'text-violet-500'
         },
         {
-            label: 'image generation',
+            label: 'генерация изображений',
             href: '/image',
             icon: ImageIcon,
             color: 'text-pink-500'
         },
         {
-            label: 'video generation',
+            label: 'генерация видео',
             href: '/video',
             icon: VideoIcon,
             color: 'text-green-300'
         },
         {
-            label: 'music generation',
+            label: 'генерация музыки',
             href: '/music',
             icon: Music,
             color: 'text-sky-500'
         },
         {
-            label: 'code generation',
+            label: 'генерация кода',
             href: '/code',
             icon: Code,
             color: 'text-orange-500'
@@ -72,7 +73,7 @@ const Sidebar = () => {
                 <Link
                   key={route.href}
                   href={route.href}
-                  className="text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition"                >
+                  className={cn("text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition", pathname === route.href ? 'text-white bg-white/10': 'text-zinc-400' )}>
                   <div className="flex items-center flex-1">
                     <route.icon className={cn("w-6 h-6 mr-3", route.color)} />
                     {route.label}
