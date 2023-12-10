@@ -7,23 +7,26 @@ const openai = new OpenAI({
 });
 
 export async function POST(request: Request) {
-    try{
-        const {userId } = auth();
+    try {
+        const { userId } = auth();
         const body = await request.json();
-        const promt = body;
+        const prompt = body.messages; // Извлекаем массив сообщений из свойства 'messages'
         
-        if(!userId){return new NextResponse('Unauthorized', { status: 401 });}
-        if(!promt){return new NextResponse('Promt is required', { status: 400 });}
+        if (!userId) {
+            return new NextResponse('Unauthorized', { status: 401 });
+        }
+        if (!prompt || !Array.isArray(prompt)) {
+            return new NextResponse('Prompt is required and should be an array of messages', { status: 400 });
+        }
 
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
-            messages: promt,
-          });
+            messages: prompt,
+        });
             
         return new NextResponse(JSON.stringify(response.choices[0].message), { status: 200 });
-    }
-    catch(e){
-        console.log('[CONVERSATION_ERROR: ', e);
+    } catch (e) {
+        console.log('[CONVERSATION_ERROR]: ', e);
         return new NextResponse('Internal Server Error', { status: 500 });
     }
 }
