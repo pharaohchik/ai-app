@@ -1,3 +1,5 @@
+// TODO: добавить проверку я ли делаю запрос на сервер или нет 
+
 import { auth } from '@clerk/nextjs';
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
@@ -10,7 +12,7 @@ export async function POST(request: Request) {
     try {
         const { userId } = auth();
         const body = await request.json();
-        const prompt = body.messages; // Извлекаем массив сообщений из свойства 'messages'
+        const prompt = body.messages; 
         
         if (!userId) {
             return new NextResponse('Unauthorized', { status: 401 });
