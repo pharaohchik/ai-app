@@ -17,7 +17,7 @@
 
 ## API
 <a id="api"></a>
-- Генерация изображений - [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+- Генерация изображений - [OpenAI API](https://openai.com/api)
 - Генерация видео - N/D
 - Генерация музыки - N/D
 - Режим разговора - [OpenAI API](https://openai.com/api)
