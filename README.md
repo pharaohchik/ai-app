@@ -5,6 +5,7 @@
 ## Table of Contents
 
 - [О программе](#about-the-program)
+- [API](#api)
 - [Функции](#functions)
 - [Использование](#usage)
 - [Внесение вклада](#contributing)
@@ -13,6 +14,14 @@
 ## О программе
 <a id="about-the-program"></a>
 Это приложение разработано для предоставления широкого спектра возможностей искусственного интеллекта. Оно может генерировать изображения, видео и музыку. В нем также есть режим разговора и режим генерации кода.
+
+## API
+<a id="api"></a>
+- Генерация изображений - [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+- Генерация видео - N/D
+- Генерация музыки - N/D
+- Режим разговора - [OpenAI API](https://openai.com/api)
+- Режим генерации кода - [OpenAI API](https://openai.com/api)
 
 ## Функции
 <a id="functions"></a>
