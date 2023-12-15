@@ -1,6 +1,5 @@
 "use client";
 import axios from "axios";
-import  OpenAI from "openai";
 import { Heading } from "@/components/heading";
 import {Download, ImageIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -14,10 +13,6 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Empty } from "@/components/empty";
 import { Loader } from "@/components/loader";
-import { cn } from "@/lib/utils";
-import { UserAvatar } from "@/components/user-avatar";
-import { BotAvatar } from "@/components/bot-avatar";
-import ReactMarkdown from 'react-markdown'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
@@ -41,7 +36,7 @@ const ImagePage = () => {
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try{
           setImages([]);
-          console.log('VALUES: ' + JSON.stringify(values));
+          console.log('[VALUES]: ' + JSON.stringify(values));
           const response = await axios.post('/api/image', JSON.stringify(values));
           const urls = response.data.map((image: { url: string }) => image.url);
           console.log(urls)

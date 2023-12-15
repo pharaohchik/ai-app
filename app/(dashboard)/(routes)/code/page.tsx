@@ -2,7 +2,7 @@
 import axios from "axios";
 import  OpenAI from "openai";
 import { Heading } from "@/components/heading";
-import { Code, MessageSquare } from "lucide-react";
+import { Code } from "lucide-react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { formSchema } from "./constants";
