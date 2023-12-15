@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {LayoutDashboard, MessageSquare, ImageIcon, VideoIcon, Music, Code, Settings} from "lucide-react";
+import {LayoutDashboard, MessageSquare, ImageIcon, VideoIcon, Music, Code, Settings, ImagePlus} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 
@@ -47,10 +47,12 @@ const Sidebar = () => {
             color: 'text-orange-500'
         },
         {
-            label: 'settings',
-            href: '/settings',
-            icon: Settings,
-        },
+          label: 'увеличение изображений',
+          href: '/upscale',
+          icon: ImagePlus,
+          color: 'text-fuchsia-500',
+          bgColor: 'bg-fuchsia-500/10',
+         },
     ];
 
     return ( 

@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
+import { ArrowRight, Code, ImageIcon, MessageSquare, Music, VideoIcon, ImagePlus } from "lucide-react";
 
 import {
   Card,
@@ -48,6 +48,13 @@ const tools = [
   icon: Code,
   color: 'text-orange-500',
   bgColor: 'bg-orange-500/10',
+ },
+ {
+  label: 'увеличение изображений',
+  href: '/upscale',
+  icon: ImagePlus,
+  color: 'text-fuchsia-500',
+  bgColor: 'bg-fuchsia-500/10',
  },
 ]
 const DashboardPage = () => {
