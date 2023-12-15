@@ -11,6 +11,8 @@ export async function POST(request: Request) {
         const { userId } = auth();
         const body = await request.json();
         const prompt = body.prompt;
+        const amount = parseInt(body.amount);
+        const res = body.resolution;
 
         if (!userId) {
             return new NextResponse('Unauthorized', { status: 401 });
@@ -21,6 +23,8 @@ export async function POST(request: Request) {
         const response = await openai.images.generate({
               model: "dall-e-3", 
               prompt: prompt,
+              n: amount,
+              size: res,
             });
 
         return new NextResponse(JSON.stringify(response.data), { status: 200 });
