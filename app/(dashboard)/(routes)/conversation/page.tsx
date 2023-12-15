@@ -46,7 +46,7 @@ const ConversationPage = () => {
           setMessages((current) => [...current, userMessage, response.data]);
           form.reset();
         }catch(e){
-            console.log('[CONVERSATION_ERROR: ', e);
+            console.log('[CONVERSATION_ERROR]: ', e);
         }finally{
             router.refresh();
         }
