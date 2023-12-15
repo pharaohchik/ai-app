@@ -18,8 +18,8 @@
 ## API
 <a id="api"></a>
 - Генерация изображений - [OpenAI API](https://openai.com/api)
-- Генерация видео - N/D
-- Генерация музыки - N/D
+- Генерация видео - [zeroscope-v2-xl](https://replicate.com/anotherjesse/zeroscope-v2-xl)
+- Генерация музыки - [riffusion](https://replicate.com/riffusion/riffusion)
 - Режим разговора - [OpenAI API](https://openai.com/api)
 - Режим генерации кода - [OpenAI API](https://openai.com/api)
 
