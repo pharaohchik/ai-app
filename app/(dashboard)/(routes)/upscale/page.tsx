@@ -13,6 +13,8 @@ import { Empty } from "@/components/empty";
 import { Loader } from "@/components/loader";
 import { Card, CardFooter } from "@/components/ui/card";
 import { UploadDropzone } from "@/components/uploadthing";
+import "@uploadthing/react/styles.css";
+
 const ImagePage = () => {
     const router = useRouter();
     const [fileUrl, setFileUrl] = useState<string>('');
@@ -48,9 +50,9 @@ const ImagePage = () => {
           bgColor="bg-fuchsia-500/10"
         />
         <div className="px-4 lg:px-8">
-          <div className="flex flex-col items-center justify-between p-24">
+          <div className="flex flex-col items-center justify-between ">
             <UploadDropzone
-              className="text-zinc-900"
+              className="ut-label:text-lg ut-allowed-content:ut-uploading:text-red-300"
               endpoint="imageUploader"
               onClientUploadComplete={(res) => {
                 onSubmit({ fileUrl: res[0].url });
