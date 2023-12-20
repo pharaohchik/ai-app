@@ -28,6 +28,9 @@ export async function POST(request: Request) {
         }
 
         if (res == '1024x1024') {
+            if (amount != 1){
+                return new NextResponse('Amount must be 1 when resolution is 1024x1024', { status: 400 });
+            }
             const response = await openai.images.generate({
                 model: "dall-e-3", 
                 prompt: prompt,

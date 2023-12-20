@@ -15,6 +15,12 @@ const recoms = [
         title: "Software Engineer",
         description: "Максимально просто, быстро, удобно, а главное - бесплатно"
     },
+    {
+        name: "Макс",
+        avatar: "М",
+        title: "человек экстремист",
+        description: "я клоун"
+    },
 ]
 export const LandingContent = () => {
     return (

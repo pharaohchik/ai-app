@@ -57,8 +57,13 @@ const ImagePage = () => {
               onClientUploadComplete={(res) => {
                 onSubmit({ fileUrl: res[0].url });
               }}
+              onUploadProgress= {({  }) => {
+                <div className="p-20 ">
+                  <Loader />
+                </div>
+              }}
               onUploadError={(error: Error) => {
-                console.log('[UPLOAD_ERROR]: ', error);
+                alert('что-то пошло не так(')
               }}
             />
           </div>
