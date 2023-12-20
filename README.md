@@ -22,6 +22,7 @@
 - Генерация музыки - [riffusion](https://replicate.com/riffusion/riffusion)
 - Режим разговора - [OpenAI API](https://openai.com/api)
 - Режим генерации кода - [OpenAI API](https://openai.com/api)
+- Режим увеличения разрешения фото - [real-esrgan](https://replicate.com/nightmareai/real-esrgan)
 
 ## Функции
 <a id="functions"></a>
