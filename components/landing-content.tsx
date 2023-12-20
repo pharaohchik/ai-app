@@ -7,7 +7,7 @@ const recoms = [
         name: "Алиса",
         avatar: "A",
         title: "Senior AI Developer",
-        description: "Это лучшее приложение для использования нейросетей, что я когда либо видела"
+        description: "Я отброс общества"
     },
     {
         name: "Юля",
