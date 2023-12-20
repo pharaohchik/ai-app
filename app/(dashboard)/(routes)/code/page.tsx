@@ -46,7 +46,7 @@ const CodePage = () => {
           setMessages((current) => [...current, userMessage, response.data]);
           form.reset();
         }catch(e){
-            console.log('[CODE_ERROR: ', e);
+            console.log('[CODE_ERROR]: ', e);
         }finally{
             router.refresh();
         }
