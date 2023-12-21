@@ -1,15 +1,19 @@
 'use client';
 
-import { ArrowRight, Code, ImageIcon, MessageSquare, Music, VideoIcon, ImagePlus } from "lucide-react";
+import { 
+  ArrowRight,
+  Code,
+  ImageIcon,
+  MessageSquare, 
+  Music, 
+  VideoIcon, 
+  ImagePlus
+} from "lucide-react";
 
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  Card
 } from "@/components/ui/card"
+
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 

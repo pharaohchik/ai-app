@@ -45,10 +45,10 @@ const ImagePage = () => {
             }
           }
           setImages([]);
-          console.log('[VALUES]: ' + JSON.stringify(values));
+          // console.log('[VALUES]: ' + JSON.stringify(values));
           const response = await axios.post('/api/image', JSON.stringify(values));
           const urls = response.data.map((image: { url: string }) => image.url);
-          console.log(urls)
+          // console.log(urls)
           setImages(urls);
           form.reset();
         }catch(e){

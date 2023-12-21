@@ -1,5 +1,3 @@
-import { Menu } from "lucide-react";
-import { Button } from "./ui/button";
 import { UserButton } from "@clerk/nextjs";
 import MobileSidebar from "./mobile-sidebar";
 
