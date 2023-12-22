@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Github, GithubIcon } from "lucide-react";
+import { GithubIcon } from "lucide-react";
+import CatSVG from 'public/cat.svg';
+import Image from "next/image";
 
 const recoms = [
     {
@@ -19,13 +21,20 @@ const recoms = [
     },
     {
         name: "Макс",
-        avatar: "М",
+        avatar: "M",
         title: "человек экстремист",
         description: "я клоун"
     },
+    {
+      name: "Аня",
+      avatar: "A",
+      title: "Product Manager",
+      description: "Мне очень понравилось! Буду и дальше пользоваться этим сайтом!!"
+  },
 ]
 export const LandingContent = () => {
     return (
+      <>
         <div className="px-10 pb-20"> 
           <h2 className="text-4xl font-extrabold text-white text-center mb-10" >
             Pекомендации
@@ -68,6 +77,11 @@ export const LandingContent = () => {
               <p className="text-zinc-400 text-sm font-medium pl-1">yulia</p>
             </Link>
           </div>
+          
         </div>
+        <div className="text-white flex flex-row-reverse">
+          <Image src={CatSVG} alt="cute cat" />
+        </div>
+      </>
     )
 }
