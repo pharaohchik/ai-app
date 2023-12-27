@@ -19,14 +19,14 @@ import { UserAvatar } from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
 import ReactMarkdown from 'react-markdown'
 const CodePage = () => {
-    const router = useRouter();
+    const router = useRouter(); // маршрутизатор
     const [messages, setMessages] = useState<OpenAI.Chat.ChatCompletionMessage []>([]);
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
             promt: '',
-        }
+        }  
     })
 
     const isLoading = form.formState.isSubmitting;

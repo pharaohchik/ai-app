@@ -1,18 +1,22 @@
-// TODO: добавить проверку я ли делаю запрос на сервер или нет 
+import { auth } from '@clerk/nextjs'; // импорт функции auth из библиотеки @clerk/nextjs которая используется для авторизации пользователей
+import { NextResponse } from 'next/server'; 
+import OpenAI from 'openai'; // импорт библиотеки OpenAI для генерации изображений
 
-import { auth } from '@clerk/nextjs';
-import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
+const openai = new OpenAI(); // создание экземпляра OpenAI
 
-const openai = new OpenAI();
-
+/**
+ * Handles a POST request and generates an image based on the provided prompt, amount, and resolution.
+ *
+ * @param {Request} request - The request object containing the necessary data.
+ * @return {Promise<NextResponse>} - The response object containing the generated image or an error message.
+ */
 export async function POST(request: Request) {
     try {
-        const { userId } = auth();
-        const body = await request.json();
-        const prompt = body.prompt;
-        const amount = parseInt(body.amount);
-        const res = body.resolution;
+        const { userId } = auth(); // деструктуризация  userId из функции auth
+        const body = await request.json(); // получение тела запроса в формате JSON
+        const prompt = body.prompt; // получение prompt из тела запроса
+        const amount = parseInt(body.amount); // получение amount из тела запроса
+        const res = body.resolution; // получение resolution из тела запроса
 
         if (!userId) {
             return new NextResponse('Unauthorized', { status: 401 });
@@ -36,7 +40,7 @@ export async function POST(request: Request) {
                 prompt: prompt,
                 n: amount,
                 size: res,
-              });
+              }); //  асинхронная генерация изображения
               console.log('[RESPONSE]: ' + JSON.stringify(response.data));
 
                return new NextResponse(JSON.stringify(response.data), { status: 200 });
