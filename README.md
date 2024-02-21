@@ -17,11 +17,11 @@
 
 ## API
 <a id="api"></a>
-- Генерация изображений - [DALL-E](https://openai.com/api)
+- Генерация изображений - [DALL-E](https://proxyapi.ru/)
 - Генерация видео - [zeroscope-v2-xl](https://replicate.com/anotherjesse/zeroscope-v2-xl)
 - Генерация музыки - [riffusion](https://replicate.com/riffusion/riffusion)
-- Режим разговора - [Chat GPT 3](https://openai.com/api)
-- Режим генерации кода - [Chat GPT 3](https://openai.com/api)
+- Режим разговора - [Chat GPT 3](https://proxyapi.ru/)
+- Режим генерации кода - [Chat GPT 3](https://proxyapi.ru/)
 - Режим увеличения разрешения фото - [real-esrgan](https://replicate.com/nightmareai/real-esrgan)
 
 ## Функции

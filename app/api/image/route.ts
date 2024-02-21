@@ -2,7 +2,10 @@ import { auth } from '@clerk/nextjs'; // импорт функции auth из �
 import { NextResponse } from 'next/server'; 
 import OpenAI from 'openai'; // импорт библиотеки OpenAI для генерации изображений
 
-const openai = new OpenAI(); // создание экземпляра OpenAI
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+    baseURL: process.env.OPENAI_BASE_URL
+  }); // создание экземпляра OpenAI
 
 /**
  * Handles a POST request and generates an image based on the provided prompt, amount, and resolution.
@@ -18,18 +21,10 @@ export async function POST(request: Request) {
         const amount = parseInt(body.amount); // получение amount из тела запроса
         const res = body.resolution; // получение resolution из тела запроса
 
-        if (!userId) {
-            return new NextResponse('Unauthorized', { status: 401 });
-        }
-        if (!prompt) {
-            return new NextResponse('Prompt is required', { status: 400 });
-        }
-        if (amount < 1 || amount > 5) {
-            return new NextResponse('Amount must be between 1 and 5', { status: 400 });
-        }
-        if (!res) {
-            return new NextResponse('Resolution is required', { status: 400 });
-        }
+        if (!userId) {return new NextResponse('Unauthorized', { status: 401 });}
+        if (!prompt) { return new NextResponse('Prompt is required', { status: 400 });}
+        if (amount < 1 || amount > 5) {return new NextResponse('Amount must be between 1 and 5', { status: 400 });}
+        if (!res) {return new NextResponse('Resolution is required', { status: 400 });}
 
         if (res == '1024x1024') {
             if (amount != 1){
@@ -59,8 +54,7 @@ export async function POST(request: Request) {
         
         
 
-    } catch (e) {
-        console.log('[IMAGE_ERROR]: ', e);
+    } catch (e) {console.log('[IMAGE_ERROR]: ', e);
         return new NextResponse('Internal Server Error', { status: 500 });
     }
 }
