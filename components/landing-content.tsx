@@ -7,18 +7,6 @@ import Image from "next/image";
 
 const recoms = [
     {
-        name: "Алиса",
-        avatar: "A",
-        title: "Senior AI Developer",
-        description: "Это лучшее приложение для использования нейросетей, что я когда либо видела"
-    },
-    {
-        name: "Юля",
-        avatar: "Ю",
-        title: "Software Engineer",
-        description: "Максимально просто, быстро, удобно, а главное - бесплатно"
-    },
-    {
         name: "Макс",
         avatar: "M",
         title: "человек экстремист",
