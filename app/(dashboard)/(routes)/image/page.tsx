@@ -38,11 +38,7 @@ const ImagePage = () => {
           const res = values.resolution;
           const amount = parseInt(values.amount);
           if (res == '1024x1024') {
-            if (amount != 1) {
-              // add render warning
-              alert('выберите пожалуйста одно изображение. к сожалению пока не умею больше :)');
-              return;
-            }
+            
           }
           setImages([]);
           // console.log('[VALUES]: ' + JSON.stringify(values));
