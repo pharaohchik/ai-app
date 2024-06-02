@@ -46,13 +46,13 @@ const Sidebar = () => {
             icon: Code,
             color: 'text-orange-500'
         },
-        {
-          label: 'увеличение изображений',
-          href: '/upscale',
-          icon: ImagePlus,
-          color: 'text-fuchsia-500',
-          bgColor: 'bg-fuchsia-500/10',
-         },
+        //{
+        //  label: 'увеличение изображений',
+        //  href: '/upscale',
+        //  icon: ImagePlus,
+        //  color: 'text-fuchsia-500',
+        //  bgColor: 'bg-fuchsia-500/10',
+        // },
     ];
 
     return ( 

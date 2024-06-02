@@ -22,7 +22,7 @@
 - Генерация музыки - [riffusion](https://replicate.com/riffusion/riffusion)
 - Режим разговора - [Chat GPT 3](https://proxyapi.ru/)
 - Режим генерации кода - [Chat GPT 3](https://proxyapi.ru/)
-- Режим увеличения разрешения фото - [real-esrgan](https://replicate.com/nightmareai/real-esrgan)
+- Режим увеличения разрешения фото (пока недоступен) - [real-esrgan](https://replicate.com/nightmareai/real-esrgan)
 
 ## Функции
 <a id="functions"></a>
